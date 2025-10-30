@@ -25,6 +25,9 @@
     ]
   },
   "private": true,
+  "repository": {
+    "url": "https://github.com/radasko1/angular-recipe-zerops"
+  },
   "dependencies": {
     "@angular/common": "^20.3.0",
     "@angular/compiler": "^20.3.0",

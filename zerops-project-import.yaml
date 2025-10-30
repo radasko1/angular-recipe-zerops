@@ -1,0 +1,10 @@
+project:
+  name: recipe-angular
+  tags:
+    - zerops-recipe
+
+services:
+  - hostname: angular
+    type: static@1.0
+    enableSubdomainAccess: true
+    buildFromGit: https://github.com/radasko1/angular-recipe-zerops

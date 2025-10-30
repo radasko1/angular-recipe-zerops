@@ -1,0 +1,31 @@
+zerops:
+  - setup: angular
+    # ==== How to build your application ====
+    build:
+      # what technologies should the build
+      # container be based on (can be an array)
+      base: nodejs@22
+
+      # what commands to use to build your app
+      buildCommands:
+        - npm install
+        - npm run build
+
+      # select which files / folders to deploy
+      # after the build successfully finished
+      # `~` can be used to mark the starting point
+      # of a deploy path, this example would deploy
+      # files in the dist folder
+      deployFiles:
+        - dist/angular-template-zerops/browser/~
+
+      # *optional*: which files / folders
+      # to cache for the next build run
+      cache:
+        - node_modules
+        - package-lock.json
+
+    # ==== How to run your application ====
+    run:
+      # all that is needed for SPA apps
+      base: static
