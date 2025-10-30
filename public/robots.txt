@@ -1,0 +1,70 @@
+# robots.txt for Production Environment
+# This file tells search engine crawlers which pages they can and cannot access
+
+# Default rule for all crawlers and bots
+# The asterisk is a wildcard meaning "all bots."
+User-agent: *
+# Allow crawling of the entire site by default
+Allow: /
+
+# Block access to admin areas
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /user/settings/
+
+# Block access to API endpoints
+Disallow: /api/
+Disallow: /v1/
+Disallow: /v2/
+
+# Block private or sensitive directories
+Disallow: /private/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /cache/
+
+# Block search and filter pages to prevent duplicate content
+Disallow: /search?
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*?page=
+
+# Block checkout and cart pages
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /order/
+
+# Block user-specific pages
+Disallow: /users/
+Disallow: /profile/
+Disallow: /account/
+
+# Block file types that shouldn't be indexed
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.pdf$
+Disallow: /*.zip$
+
+# Allow specific bots full access (optional - remove if not needed)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block bad bots and scrapers (optional)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Crawl delay (optional - use carefully as it may slow indexing)
+# Crawl-delay: 10
+
+# Sitemap location (highly recommended)
+Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://yourdomain.com/sitemap-images.xml

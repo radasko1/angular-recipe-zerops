@@ -57,3 +57,8 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Robots.txt Configuration
+
+This repository includes a pre-configured **robots.txt** file located in the `public` folder.
+For detailed information about the **robots.txt** settings and configuration options, please refer to the documentation in `docs/robots-txt.md`.
